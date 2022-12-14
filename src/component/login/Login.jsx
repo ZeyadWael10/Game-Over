@@ -39,7 +39,7 @@ export default function Login(props) {
         window.alert('ههه اعمل اكونت جديد')
     }
     async function getUserInfoFromApi(res) {
-        let { data } = await Axios.post(`https://route-egypt-api.herokuapp.com/signin`, res)
+        let { data } = await Axios.post(`https://route-movies-api.vercel.app/signin`, res)
         if (data.message === "success") {
             setErrorMsg('')
             localStorage.setItem("token", data.token)

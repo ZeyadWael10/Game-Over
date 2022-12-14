@@ -43,7 +43,7 @@ export default function Register() {
     return schema.validate(user, { abortEarly: false });
   }
   async function getUserInfoFromApi(res) {
-    let { data } = await Axios.post(`https://route-egypt-api.herokuapp.com/signup`, res)
+    let { data } = await Axios.post(`https://route-movies-api.vercel.app/signup`, res)
     if (data.message === "success") {
       setErrorMsg('')
       Navigate("/login")
